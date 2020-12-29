@@ -5,8 +5,8 @@ import java.lang.Exception
 
 interface ISlickyMockServerInterface {
 
-    fun getPassCodeInternals(): ApiCallResult
+    suspend fun getPassCodeInternals(): ApiCallResult
 
-    fun validatePassword(typedPassCode : String) : ApiCallResult
+    suspend fun validatePassword(typedPassCode : String) : ApiCallResult
 
 }

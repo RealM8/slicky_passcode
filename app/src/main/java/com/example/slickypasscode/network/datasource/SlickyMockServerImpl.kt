@@ -18,7 +18,7 @@ class SlickyMockServerImpl : ISlickyMockServerInterface {
     private val possibleCodes = arrayOf("1234", "4321")
     private lateinit var correctPassCode : String
 
-    override fun getPassCodeInternals(): ApiCallResult {
+    override suspend fun getPassCodeInternals(): ApiCallResult {
         //Imitates long running network request
         Thread.sleep(3000)
 
@@ -31,7 +31,7 @@ class SlickyMockServerImpl : ISlickyMockServerInterface {
         }
     }
 
-    override fun validatePassword(typedPassCode: String): ApiCallResult {
+    override suspend fun validatePassword(typedPassCode: String): ApiCallResult {
         if (correctPassCode == typedPassCode)
             return ApiCallResult(NetworkResult.SUCCESS, booleanValue = true)
 
