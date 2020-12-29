@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/title"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pin_first"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/pin_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_progressempty"
+            app:layout_constraintBottom_toTopOf="@id/top_left"
+            app:layout_constraintEnd_toStartOf="@id/pin_second"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <ImageView
+            android:id="@+id/pin_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_progressempty"
+            app:layout_constraintBottom_toBottomOf="@id/pin_first"
+            app:layout_constraintEnd_toStartOf="@id/pin_third"
+            app:layout_constraintStart_toEndOf="@id/pin_first"
+            app:layout_constraintTop_toTopOf="@id/pin_first" />
+
+        <ImageView
+            android:id="@+id/pin_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_progressempty"
+            app:layout_constraintBottom_toBottomOf="@id/pin_first"
+            app:layout_constraintEnd_toStartOf="@id/pin_fourth"
+            app:layout_constraintStart_toEndOf="@id/pin_second"
+            app:layout_constraintTop_toTopOf="@id/pin_first" />
+
+        <ImageView
+            android:id="@+id/pin_fourth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_progressempty"
+            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/pin_first"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/pin_third"
+            app:layout_constraintTop_toTopOf="@id/pin_first" />
+
+        <Button
+            android:id="@+id/top_left"
+            android:layout_width="@dimen/circle_button_with_digit_diameter"
+            android:layout_height="@dimen/circle_button_with_digit_diameter"
+            android:background="@drawable/circle_digit_button_background"
+            android:textSize="@dimen/circle_button_with_digit_font_size"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/center_left"
+            app:layout_constraintEnd_toStartOf="@id/top_center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pin_first" />
+
+        <Button
+            android:id="@+id/top_center"
+            android:layout_width="@dimen/circle_button_with_digit_diameter"
+            android:layout_height="@dimen/circle_button_with_digit_diameter"
+            android:background="@drawable/circle_digit_button_background"
+            android:textSize="@dimen/circle_button_with_digit_font_size"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@id/top_right"
+            app:layout_constraintStart_toEndOf="@id/top_left"
+            app:layout_constraintTop_toTopOf="@id/top_left" />
+
+        <Button
+            android:id="@+id/top_right"
+            android:layout_width="@dimen/circle_button_with_digit_diameter"
+            android:layout_height="@dimen/circle_button_with_digit_diameter"
+            android:background="@drawable/circle_digit_button_background"
+            android:textSize="@dimen/circle_button_with_digit_font_size"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/top_center"
+            app:layout_constraintTop_toTopOf="@id/top_left" />
+
+        <Button
+            android:id="@+id/center_left"
+            android:layout_width="@dimen/circle_button_with_digit_diameter"
+            android:layout_height="@dimen/circle_button_with_digit_diameter"
+            android:background="@drawable/circle_digit_button_background"
+            android:textSize="@dimen/circle_button_with_digit_font_size"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/bottom_left"
+            app:layout_constraintEnd_toStartOf="@id/center_center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_left" />
+
+        <Button
+            android:id="@+id/center_center"
+            android:layout_width="@dimen/circle_button_with_digit_diameter"
+            android:layout_height="@dimen/circle_button_with_digit_diameter"
+            android:background="@drawable/circle_digit_button_background"
+            android:textSize="@dimen/circle_button_with_digit_font_size"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@id/center_right"
+            app:layout_constraintStart_toEndOf="@id/center_left"
+            app:layout_constraintTop_toTopOf="@id/center_left" />
+
+        <Button
+            android:id="@+id/center_right"
+            android:layout_width="@dimen/circle_button_with_digit_diameter"
+            android:layout_height="@dimen/circle_button_with_digit_diameter"
+            android:background="@drawable/circle_digit_button_background"
+            android:textSize="@dimen/circle_button_with_digit_font_size"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/center_center"
+            app:layout_constraintTop_toTopOf="@id/center_left" />
+
+        <Button
+            android:id="@+id/bottom_left"
+            android:layout_width="@dimen/circle_button_with_digit_diameter"
+            android:layout_height="@dimen/circle_button_with_digit_diameter"
+            android:background="@drawable/circle_digit_button_background"
+            android:textSize="@dimen/circle_button_with_digit_font_size"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/bottom"
+            app:layout_constraintEnd_toStartOf="@id/bottom_center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/center_left" />
+
+        <Button
+            android:id="@+id/bottom_center"
+            android:layout_width="@dimen/circle_button_with_digit_diameter"
+            android:layout_height="@dimen/circle_button_with_digit_diameter"
+            android:background="@drawable/circle_digit_button_background"
+            android:textSize="@dimen/circle_button_with_digit_font_size"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@id/bottom_right"
+            app:layout_constraintStart_toEndOf="@id/bottom_left"
+            app:layout_constraintTop_toTopOf="@id/bottom_left" />
+
+        <Button
+            android:id="@+id/bottom_right"
+            android:layout_width="@dimen/circle_button_with_digit_diameter"
+            android:layout_height="@dimen/circle_button_with_digit_diameter"
+            android:background="@drawable/circle_digit_button_background"
+            android:textSize="@dimen/circle_button_with_digit_font_size"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bottom_center"
+            app:layout_constraintTop_toTopOf="@id/bottom_left" />
+
+        <Button
+            android:id="@+id/bottom"
+            android:layout_width="@dimen/circle_button_with_digit_diameter"
+            android:layout_height="@dimen/circle_button_with_digit_diameter"
+            android:background="@drawable/circle_digit_button_background"
+            android:textSize="@dimen/circle_button_with_digit_font_size"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/button_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bottom_left" />
+
+        <Button
+            android:id="@+id/button_cancel"
+            style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="cancel"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_delete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bottom" />
+
+        <Button
+            android:id="@+id/button_delete"
+            style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="delete"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@id/button_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_cancel"
+            app:layout_constraintTop_toTopOf="@id/button_cancel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/loading_indicator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/colorLoadingIndicatorBackground"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/loading_indicator_progressbar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+        <TextView
+            android:id="@+id/loading_indicator_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loading_indicator_progressbar"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:text="@string/main_activity_loading_indicator_text" />
+
+    </RelativeLayout>
+
+</FrameLayout>
