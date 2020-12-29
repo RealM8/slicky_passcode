@@ -11,7 +11,7 @@ class ServerRepositoryImpl (private val slickyMockServer : ISlickyMockServerInte
         return@withContext slickyMockServer.getPassCodeInternals()
     }
 
-    override suspend fun validatePassword(typedPasscode: String): ApiCallResult = withContext(Dispatchers.IO) {
-        return@withContext slickyMockServer.validatePassword(typedPasscode)
+    override suspend fun validatePassword(typedPassCode: String): ApiCallResult = withContext(Dispatchers.IO) {
+        return@withContext slickyMockServer.validatePassword(typedPassCode)
     }
 }

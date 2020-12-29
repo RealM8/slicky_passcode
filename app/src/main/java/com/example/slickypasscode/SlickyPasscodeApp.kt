@@ -1,13 +1,12 @@
 package com.example.slickypasscode
 
 import android.app.Application
-import androidx.multidex.MultiDexApplication
 import com.example.slickypasscode.network.ISlickyMockServerInterface
 import com.example.slickypasscode.network.IServerRepository
 import com.example.slickypasscode.network.ServerRepositoryImpl
 import com.example.slickypasscode.network.SlickyMockServerImpl
 
-class SlickyPasscodeApp : MultiDexApplication() {
+class SlickyPasscodeApp : Application() {
 
     companion object {
 

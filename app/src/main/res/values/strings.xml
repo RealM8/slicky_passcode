@@ -5,7 +5,7 @@
     <string name="retry">Retry</string>
     <string name="alert">Alert</string>
 
-    <string name="main_activity_loading_indicator_text">Retrieving login data from server, please wait</string>
+    <string name="main_activity_loading_indicator_text">Retrieving data from server, please wait</string>
     <string name="main_activity_wrong_password_toast">Wrong passcode entered</string>
     <string name="network_viewmodel_error_during_loading_data_dialog_message">Sorry, error has been occurred during retrieving data from server. Retry loading?</string>
     <string name="network_viewmodel_error_empty_data_loaded_message">Sorry, request is successful, but server has returned an empty data. Retry loading?</string>
